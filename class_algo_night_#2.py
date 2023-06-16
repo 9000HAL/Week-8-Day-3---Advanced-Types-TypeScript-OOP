@@ -15,16 +15,41 @@ research: By initializing two variables pointer_one and pointer_two and evaluati
 we can find pairs in an array that sum up to a certain number with a O(n) time complexity.
 
 
+
+def two_pointer(array):
+    left = 0
+    right = len(array) -1
+    while left <= right:
+        array[left], array[right], = array[left], array[right]
+
+
 """
+
+
 
 
 array = [3, 5, -4, 8, 11, 1, -1, 6]
 
-def number_sum(array, target_sum):
-    for num in array:
-        if num != num:
-            other_num = target_sum - num 
-            if other_num in array:
-                return [num, other_num]
 
-print(number_sum(array, 10))
+
+def number_sum(array, target_sum):
+    array.sort()
+    print(array)
+    left = 0
+    right = len(array) -1
+    output = []
+    while left < right:
+        left_right = array[left] + array[right]
+        if left_right == target_sum:
+            output.append(array[left])
+            output.append(array[right])
+            return output
+        elif left_right > target_sum:
+                left += 1
+        else:
+                right -= 1
+        return []
+           
+
+
+print(number_sum(array, 8))
