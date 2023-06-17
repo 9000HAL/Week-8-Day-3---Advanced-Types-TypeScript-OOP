@@ -1,25 +1,19 @@
 // testing the output inside the console with console.log
 
 
-
 // Type Aliases: Creating our own Type
-
 
 
 // Union Types: Can allow a variable to be one of many types (number | string)
 
 
-
 // TypeScript Arrow Function
-
 
 
 // Literal Types (exact)
 
 
-
 // Nullish Coalescing Operator (??): We can fallback to a default value when dealing with null/undefined objects
-
 
 
 
@@ -28,27 +22,20 @@
 
 
 
-
 // The "unknown" type: We have to narrow down to a specific type before performing any operations
 // It is preferred to use "unknown" over "any" bc it forces us to do some type checking
-
 
 
 // Creating Classes
 
 
-
-
 // typeof vs instanceof
-
 
 
 // private properties and accessing them
 
 
-
 // Building a class with parameter properties: Preferred way
-
 
 
 // Interfaces vs Types
@@ -58,12 +45,12 @@ Interfaces can also inherit from other Interfaces & Types, while Types cannot.
 */
 
 
-
 // interface MUST be an object
 
 
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
