@@ -6,17 +6,69 @@ console.log('thieves')
 
 // Type Aliases: Creating our own Type
 
+type Employees = {
+    id: number
+    name: string
+}
+
+const employees: Employees = {
+    id: 0,
+    name: 'Dylan'
+}
+
+const employees2: Employees = {
+    id: 1,
+    name: 'Christian'
+
+}
+
+
 
 // Union Types: Can allow a variable to be one of many types (number | string)
+
+function kgToLbs(weight: number | string): number {
+    if (typeof weight === 'string') {
+        return parseInt(weight) * 2.2
+    }   else {
+            return weight * 2.2
+    }
+}
+console.log(kgToLbs(10)) //22
+console.log(kgToLbs('10')) //22
+console.log(kgToLbs('10kg')) //22
+
+
 
 
 // TypeScript Arrow Function
 
+const lbsToKg = (weight: number | string): number => {    
+    return 0
+}
+
+
+
+
+
 
 // Literal Types (exact)
 
+type Quantity = (25 | 50 | 75 | 100)
+
+let quantity: Quantity = 100
+
+
 
 // Nullish Coalescing Operator (??): We can fallback to a default value when dealing with null/undefined objects
+
+let speed: number | null = null
+
+// FALSEY VALUES : 0, false, undefined, ''(an empty string), null
+let ride = {
+    speed: speed ?? 30
+}
+
+console.log(ride)
 
 
 
@@ -59,9 +111,7 @@ Interfaces can also inherit from other Interfaces & Types, while Types cannot.
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
+/*
 
 
 // testing the output inside the console with console.log
@@ -121,3 +171,6 @@ let someValue: unknown = "hello";
 let strLength: number = (someValue as string).length;
 console.log(strLength);
 //Explanation: Type assertions allow us to specify a different type for a variable than the one inferred by the compiler. In this example, we have a variable someValue of type unknown, which means the type is not known at compile-time. We use a type assertion `(someValue as string
+
+
+*/
