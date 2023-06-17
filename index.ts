@@ -72,8 +72,9 @@ console.log(ride)
 
 
 
-// Type Assertions: specify a different type than the one inferred by the compiler.
-// NOTE: There isn't any type conversion happening under the hood.
+//////////here/////////////
+
+
 
 /*
 const myInput = document.getElementById('#myInput') as HTMLInputElement
@@ -110,14 +111,19 @@ class Cohort {
 class Cohort {
     name: string;
     number: number;
-    constructor(name: 'string', number: number ){
+    constructor(name: string, number: number ){
         this.name = name
         this.number = number
+    }
+    printInfo = (): string => {
+        return `${this.name}-${this.number}`
     }
 }
 
 const thieves = new Cohort('thieves', 118)
 console.log(thieves.printInfo())
+
+
 
 
 
