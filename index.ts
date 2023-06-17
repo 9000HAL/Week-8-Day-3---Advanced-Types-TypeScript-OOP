@@ -1,5 +1,8 @@
 // testing the output inside the console with console.log
 
+console.log('thieves')
+
+
 
 // Type Aliases: Creating our own Type
 
