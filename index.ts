@@ -75,16 +75,54 @@ console.log(ride)
 // Type Assertions: specify a different type than the one inferred by the compiler.
 // NOTE: There isn't any type conversion happening under the hood.
 
+/*
+const myInput = document.getElementById('#myInput') as HTMLInputElement
+myInput.value
+*/
 
 
 // The "unknown" type: We have to narrow down to a specific type before performing any operations
-// It is preferred to use "unknown" over "any" bc it forces us to do some type checking
+// It is preferred to use "unknown" over "any" bc it forces us to do some type checking ----> ( "the 'narrowing' I was talking about")
+
+const render = (document: unknown) => {
+    if (typeof document === 'string'){
+        console.log('string')
+    } else if (typeof document === 'number'){
+        document.toFixed()
+    }
+}
 
 
-// Creating Classes
+
+// Creating Classes--------------------------------
+
+/*
+/////JAVACSRIPT EXAMPLE:
+class Cohort {
+    constructor(name, number){
+        this.name = name
+        this.numnber = number
+    }
+}
+*/
+
+/////-------> TYPESCRIPT:
+class Cohort {
+    name: string;
+    number: number;
+    constructor(name: 'string', number: number ){
+        this.name = name
+        this.number = number
+    }
+}
+
+const thieves = new Cohort('thieves', 118)
+console.log(thieves.printInfo())
 
 
-// typeof vs instanceof
+
+
+// typeof vs instanceof -----------------------------------------------------------
 
 
 // private properties and accessing them
