@@ -40,7 +40,7 @@ class Person {
 
 
 // 4. Create a new class called "Employee" that extends "Person" and adds a new property called salary. 
-//NOTE: SKIP THIS QUESTION #4 PER C. ASKEW ******************************************************
+//NOTE: SKIP THIS QUESTION #4 PER C. ASKEW *****************************************************************************************************************************
 
 
 
