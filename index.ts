@@ -170,12 +170,22 @@ type Student2 = {
     age: number
 }
 
-class Cohort3 implements Student {
-    constructor(public name: string, private _number: number, public studentName: string, public age: number ){}
+class Cohort3 {
+    constructor(public name: string, private _number: number){}
     printInfo = (): string => {
         return `${this.name}-${this._number * 12}`
     }
 }
+
+class Cohort4 extends Cohort3 {
+    constructor(public name: string, private _number: number, public classSize: number){
+        super(name, _number)
+    }
+}
+
+///////////////^^^^^^^^^^^^^^^^^^^^^PROBLEM HERE ABOVE DISREGARD FOR NOW RE: RED SQUIGGHLY LINES
+
+
 
 
 
