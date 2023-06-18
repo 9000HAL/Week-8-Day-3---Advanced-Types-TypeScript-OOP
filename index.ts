@@ -107,7 +107,9 @@ class Cohort {
 }
 */
 
-/////-------> TYPESCRIPT:
+/////-------> TYPESCRIPT: Creating Classes--------------------------------
+
+/*
 class Cohort {
     name: string;
     number: number;
@@ -123,36 +125,64 @@ class Cohort {
 const thieves = new Cohort('thieves', 118)
 console.log(thieves.printInfo())
 
-
-
-
+*/
 
 
 // typeof vs instanceof -----------------------------------------------------------
 
+console.log(thieves instanceof Cohort)
+
+console.log(thieves instanceof String)
+
+
 
 // private properties and accessing them
+
+class Cohort2 {
+    constructor(public name: string, private _number: number ){}
+    printInfo = (): string => {
+        return `${this.name}-${this._number * 12}`
+    }
+}
+
 
 
 // Building a class with parameter properties: Preferred way
 
 
 // Interfaces vs Types
+
 /* They both establish a shape of an object and can be used interchangeably BUT 
 Its more conventional to implement Interfaces with Classes AND
 Interfaces can also inherit from other Interfaces & Types, while Types cannot.
 */
 
-
 // interface MUST be an object
 
+interface Student {
+    studentName: string,
+    age: number,
+    location?: string /////   ? for OPTIONA:
+}
+
+type Student2 = {
+    studentName: string,
+    age: number
+}
+
+class Cohort3 implements Student {
+    constructor(public name: string, private _number: number, public studentName: string, public age: number ){}
+    printInfo = (): string => {
+        return `${this.name}-${this._number * 12}`
+    }
+}
 
 
 
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 /*
